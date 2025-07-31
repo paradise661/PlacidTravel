@@ -15,6 +15,7 @@ use App\Models\Review;
 use App\Models\Scholarship;
 use App\Models\Services;
 use App\Models\Slider;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -29,7 +30,8 @@ class FrontendController extends Controller
         $course = Scholarship::where('status', 1)->orderBy('order', 'asc')->get();
         $blogs = News::where('status', 1)->orderBy('order', 'asc')->take(3)->get();
         $popup = PopUp::where('status', 1)->get();
-        return view('frontend.home.index', compact('blogs', 'popup', 'course', 'country', 'services', 'review', 'slider'));
+        $galleries = Gallery::latest()->take(12)->get();
+        return view('frontend.home.index', compact('blogs', 'popup', 'course', 'country', 'services', 'review', 'slider','galleries'));
     }
     public function contact()
     {

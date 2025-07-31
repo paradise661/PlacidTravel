@@ -249,4 +249,31 @@
             </div>
         </div>
     </section>
+    <!-- Gallery Section -->
+    <!-- Gallery Section -->
+    @if ($galleries->isNotEmpty())
+        <section class="gallery-section py-5">
+            <div class="container">
+                <div class="section-title text-center mb-4">
+                    <h2 class="section-title__title">Our Gallery</h2>
+                    <p>Explore beautiful moments from our tours</p>
+                </div>
+                <div class="row g-3">
+                    @foreach ($galleries as $gallery)
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <div class="gallery-item">
+                                <a data-lightbox="gallery" data-title="{{ $gallery->title ?? 'Gallery Image' }}"
+                                    href="{{ asset('uploads/gallery/' . $gallery->image) }}">
+                                    <img class="img-fluid rounded shadow-sm"
+                                        src="{{ asset('uploads/gallery/' . $gallery->image) }}"
+                                        alt="{{ $gallery->title ?? 'Gallery Image' }}">
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endif
+
 @endsection

@@ -239,13 +239,13 @@
                         <div data-i18n="Accordion">Settings</div>
                     </a>
                 </li>
-                {{-- <li class="menu-item">
-                    <a href="{{ route('galleries.index') }}"
-                        class="menu-link {{ Request::segment(2) == 'galleries' ? 'active' : '' }}">
+                <li class="menu-item">
+                    <a class="menu-link {{ Request::segment(2) == 'galleries' ? 'active' : '' }}"
+                        href="{{ route('galleries.index') }}">
                         <i class="menu-icon tf-icons bx bx-images"></i>
                         <div data-i18n="Accordion">Gallery</div>
                     </a>
-                </li> --}}
+                </li>
                 {{-- <li class="menu-item">
                     <a class="menu-link {{ Request::segment(2) == 'galleries' ? 'active' : '' }}"
                         href="{{ route('counter.index') }}">
