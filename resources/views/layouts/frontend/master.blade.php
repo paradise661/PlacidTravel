@@ -47,6 +47,8 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/vegas/vegas.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/jquery-ui/jquery-ui.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/timepicker/timePicker.css') }}" />
+    <!-- Lightbox2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/tevily.css') }}" />
@@ -86,6 +88,17 @@
     <script src="{{ asset('frontend/assets/vendors/vegas/vegas.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/vendors/jquery-ui/jquery-ui.js') }}"></script>
     <script src="{{ asset('frontend/assets/vendors/timepicker/timePicker.js') }}"></script>
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'fadeDuration': 300,
+            'imageFadeDuration': 300,
+            'showImageNumberLabel': true
+        })
+    </script>
 
     <!-- Template JS -->
     <script src="{{ asset('frontend/assets/js/tevily.js') }}"></script>

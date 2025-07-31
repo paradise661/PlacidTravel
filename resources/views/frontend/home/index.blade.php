@@ -268,7 +268,6 @@
                                         alt="{{ $gallery->title ?? 'Gallery Image' }}"
                                         onerror="this.onerror=null; this.src='{{ asset('frontend/assets/img/default-image.jpg') }}';">
                                 </a>
-
                             </div>
                         </div>
                     @endforeach
