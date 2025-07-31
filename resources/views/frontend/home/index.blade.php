@@ -263,11 +263,12 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="gallery-item">
                                 <a data-lightbox="gallery" data-title="{{ $gallery->title ?? 'Gallery Image' }}"
-                                    href="{{ asset('uploads/gallery/' . $gallery->image) }}">
-                                    <img class="img-fluid rounded shadow-sm"
-                                        src="{{ asset('uploads/gallery/' . $gallery->image) }}"
-                                        alt="{{ $gallery->title ?? 'Gallery Image' }}">
+                                    href="{{ asset($gallery->image) }}">
+                                    <img class="img-fluid rounded shadow-sm" src="{{ asset($gallery->image) }}"
+                                        alt="{{ $gallery->title ?? 'Gallery Image' }}"
+                                        onerror="this.onerror=null; this.src='{{ asset('frontend/assets/img/default-image.jpg') }}';">
                                 </a>
+
                             </div>
                         </div>
                     @endforeach
