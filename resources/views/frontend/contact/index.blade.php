@@ -44,15 +44,20 @@
                         <div class="contact-page__left">
                             <div class="section-title text-left">
                                 <span class="section-title__tagline">Talk with our team</span>
-                                <h2 class="section-title__title">{{ $setting['homepage_contacttitle'] }}</h2>
+                                {{-- <h2 class="section-title__title">{{ $setting['homepage_contacttitle'] }}</h2> --}}
                             </div>
-                            <div class="contact-page__social">
-                                @foreach (getsocialmedia() as $key => $social)
-                                    <a class="social-icon" href="{{ $social->link }}" target="_blank">
-                                        <i class="{{ $social->icon ?? '' }}"></i>
-                                    </a>
-                                @endforeach
+                            <div class="contact-info">
+                                {{-- <h3>HAVE QUERIES ?</h3> --}}
+                                <p><i class="fas fa-envelope icon"></i> <strong>Email
+                                        Us:</strong><br><a href="mailto:{{ $setting['site_email'] ?? 'info@example.com' }}">
+                                        {{ $setting['site_email'] ?? 'info@example.com' }}</a></p>
+                                <p><i class="fas fa-map-marker-alt icon"></i>
+                                    <strong>Location:</strong><br>{{ $setting['site_location'] ?? '' }}
+                                </p>
+                                <p><i class="fas fa-phone-alt icon"></i> <strong>Phone:</strong><br><a
+                                        href="tel:{{ $setting['site_phone'] }}">{{ $setting['site_phone'] ?? '' }}</a></p>
                             </div>
+
                         </div>
                     </div>
                     <div class="col-xl-8 col-lg-7">
@@ -182,7 +187,7 @@
         <!--Contact Page End-->
 
         <!--Information Start-->
-        <section class="information">
+        {{-- <section class="information">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4">
@@ -225,7 +230,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!--Information End-->
 
         <!--Google Map Start-->
